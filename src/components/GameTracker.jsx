@@ -200,8 +200,12 @@ export default function GameTracker() {
     const recomendaria = String(data.reviewRecommend) === 'true';
     const payload = {
       juegoId: data.reviewGame,
+      gameId: data.reviewGame,
       textoReseña: data.reviewContent?.trim(),
+      textoResena: data.reviewContent?.trim(),
+      contenido: data.reviewContent?.trim(),
       puntuacion: rating,
+      rating,
       horasJugadas: horas,
       dificultad: data.reviewDifficulty,
       recomendaria,
